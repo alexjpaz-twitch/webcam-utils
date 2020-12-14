@@ -49,6 +49,10 @@
     </div>
   <script>
     function init() {
+        // Just ask so we can do the popup
+        navigator.getUserMedia({ video: true }, ()=> {}, () =>{});
+        //
+
         const video = document.getElementById('webcam');
 
         const deviceId = new URL(location.href).searchParams.get('deviceId');
